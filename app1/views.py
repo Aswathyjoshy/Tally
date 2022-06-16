@@ -32,5 +32,40 @@ def voucher(request):
 def vouchpage(request):
     return render(request, 'vouchpage.html')
 
+def currency(request):
+    return render(request, 'currency.html')
+
+def currency_alter(request):
+    return render(request, 'currency_alter.html')
+
+def stock_grp(request):
+    return render(request, 'stock_grp.html')
+
+def stock_items(request):
+    return render(request, 'stock_items.html')
+
+def stock_cat(request):
+    return render(request, 'stock_cat.html')
+
+def units(request):
+    return render(request, 'units.html')
+
+def godwn(request):
+    return render(request, 'godwn.html')
+
+def godwn_alter(request):
+    return render(request, 'godwn_alter.html')
+
+def emp_cat(request):
+    return render(request, 'emp_cat.html')
+
+def emp_cat_alter(request):
+    return render(request, 'emp_cat_alter.html')
+
+
+
+
+
+
 
 

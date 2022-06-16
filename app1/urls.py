@@ -14,6 +14,17 @@ urlpatterns = [
     path('costcentr',views.costcentr,name='costcentr'),
     path('voucher',views.voucher,name='voucher'),
     path('vouchpage',views.vouchpage,name='vouchpage'),
+    path('currency',views.currency,name='currency'),
+    path('currency_alter',views.currency_alter,name='currency_alter'),
+    path('stock_grp',views.stock_grp,name='stock_grp'),
+    path('stock_items',views.stock_items,name='stock_items'),
+    path('units',views.units,name='units'),
+    path('stock_cat',views.stock_cat,name='stock_cat'),
+    path('godwn',views.godwn,name='godwn'),
+    path('godwn_alter',views.godwn_alter,name='godwn_alter'),
+    path('emp_cat',views.emp_cat,name='emp_cat'),
+    path('emp_cat_alter',views.emp_cat_alter,name='emp_cat_alter'),
+
 
 
 
