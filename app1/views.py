@@ -62,6 +62,22 @@ def emp_cat(request):
 def emp_cat_alter(request):
     return render(request, 'emp_cat_alter.html')
 
+def emp_grp(request):
+    return render(request, 'emp_grp.html')
+
+def emp(request):
+    return render(request, 'emp.html')
+
+def atndnce_list(request):
+    return render(request, 'atndnce_list.html')
+
+def pay(request):
+    return render(request, 'pay.html')
+
+
+
+
+
 
 
 

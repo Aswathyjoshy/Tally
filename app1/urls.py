@@ -24,6 +24,10 @@ urlpatterns = [
     path('godwn_alter',views.godwn_alter,name='godwn_alter'),
     path('emp_cat',views.emp_cat,name='emp_cat'),
     path('emp_cat_alter',views.emp_cat_alter,name='emp_cat_alter'),
+    path('emp_grp',views.emp_grp,name='emp_grp'),
+    path('emp',views.emp,name='emp'),
+    path('atndnce_list',views.atndnce_list,name='atndnce_list'),
+    path('pay',views.pay,name='pay'),
 
 
 
