@@ -28,6 +28,7 @@ urlpatterns = [
     path('emp',views.emp,name='emp'),
     path('atndnce_list',views.atndnce_list,name='atndnce_list'),
     path('pay',views.pay,name='pay'),
+    path('profit',views.profit,name='profit'),
 
 
 

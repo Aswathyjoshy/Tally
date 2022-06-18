@@ -1,4 +1,13 @@
 from django.shortcuts import render
+from multiprocessing import context
+from unicodedata import name
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
+
+from .models import *
+from datetime import datetime, date, timedelta
+from django.contrib.auth.models import User, auth
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -73,6 +82,46 @@ def atndnce_list(request):
 
 def pay(request):
     return render(request, 'pay.html')
+
+def profit(request):
+    return render(request, 'profit.html')
+
+
+@csrf_exempt
+def create_group(request):
+    if request.method == 'POST':
+        gname = request.POST['gname']
+        alia = request.POST['alia']
+        if len(gname) <= 0:
+            return JsonResponse({
+                'status': 00
+            })
+
+        if len(alia) <= 0:
+            alia = None
+        else:
+            pass
+
+        under = request.POST['und']
+        gp = request.POST['subled']
+        nett = request.POST['nee']
+        calc = request.POST['cal']
+        meth = request.POST['meth']
+
+        mdl = GroupModel(
+            name=gname,
+            alias=alia,
+            under=under,
+            gp_behaves_like_sub_ledger=gp,
+            nett_debit_credit_bal_reporting=nett,
+            used_for_calculation=calc,
+            method_to_allocate_usd_purchase=meth,
+        )
+        mdl.save()
+        # return redirect('index_view')
+        return JsonResponse({
+            'status': 1
+        })
 
 
 
