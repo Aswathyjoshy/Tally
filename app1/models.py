@@ -51,6 +51,35 @@ class CreateEmployeeCategory(models.Model):
 
 
 
+# class VoucherModel(models.Model):
+#     voucher_name = models.CharField(max_length=225)
+#     alias = models.CharField(max_length=225)
+#     voucher_type = models.CharField(max_length=225)
+#     abbreviation = models.CharField(max_length=225)
+#     active_this_voucher_type = models.BooleanField()
+#     method_voucher_numbering = models.CharField(max_length=225)
+#     use_effective_date = models.BooleanField()
+#     allow_zero_value_trns = models.BooleanField()
+#     allow_naration_in_voucher = models.BooleanField()
+#     enable_default_ac_allocation = models.BooleanField()
+#     track_additional_cost_purchase = models.BooleanField()
+#     use_as_manf_journal = models.BooleanField()
+#     print_voucher_af_save = models.BooleanField()
+#     print_formal_recept = models.BooleanField()
+#     default_juridiction = models.CharField(max_length=225)
+#     default_title = models.CharField(max_length=225)
+#     alter_decalaration = models.BooleanField()
+
+
+# class CurrencyAlter(models.Model):
+#     cname= models.ForeignKey( CreateCurrency,on_delete=models.CASCADE,default=1)
+#     slno = models.CharField(max_length=225)
+#     currencys = models.CharField(max_length=225)
+#     stdrate =models.CharField(max_length=225)
+#     lastvrate =models.CharField(max_length=225)
+#     specirate =models.CharField(max_length=225)
+#     lastvrate2 =models.CharField(max_length=225)
+#     specirate2 =models.CharField(max_length=225)
 class VoucherModel(models.Model):
     voucher_name = models.CharField(max_length=225)
     alias = models.CharField(max_length=225)
