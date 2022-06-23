@@ -30,6 +30,10 @@ urlpatterns = [
     path('pay',views.pay,name='pay'),
     path('profit',views.profit,name='profit'),
 
+    # path('save_currency_data',views.save_currency_data,name="save_currency_data"),
+    path('load_create_currency',views.load_create_currency,name='load_create_currency'),
+    path('create_currency',views.create_currency,name='create_currency'),
+
 
 
 
