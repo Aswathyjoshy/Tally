@@ -48,8 +48,14 @@ def currency(request):
 
 
 
-def currency_alter(request):
-    return render(request, 'currency_alter.html')
+# def currency_alter(request):
+
+#     return render(request, 'currency_alter.html')
+
+def currency_alter(request,pk):
+    cur=CreateCurrency.objects.get(id=pk)
+    return render(request,'currency_alter.html',{'i':cur})
+
 
 def stock_grp(request):
     return render(request, 'stock_grp.html')

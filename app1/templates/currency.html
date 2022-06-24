@@ -171,7 +171,7 @@ td
       <a href="currency_alter"><button  class="btns_prnt p-3" id="create"><h6>₹</h6></button></a>
 
       {% for i in cur %}
-      <a href="currency_alter"><button  class="btns_prnt p-3" id="create"><h6>{{ i.symbol }}</h6></button></a>
+      <a href="{% url 'currency_alter' i.id  %}"><button  class="btns_prnt p-3" id="create"><h6>{{ i.symbol }}</h6></button></a>
       {% endfor %}
     </div>
     {% endblock %}
