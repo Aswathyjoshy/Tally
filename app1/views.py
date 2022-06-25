@@ -177,44 +177,31 @@ def create_currency(request):
         return redirect('load_create_currency')
 
 
-# def save_currency_data(request):
-#     if request.method == 'POST':
-#         sl = request.POST['slno']
-#         cname = request.POST['curname']
-#         stdr = request.POST['stdr']
-#         lvr = request.POST['lvr']
-#         sr = request.POST['sr']
-#         lvr2 = request.POST['lvr2']
-#         sr2 = request.POST['sr2']
+def save_currency_data(request):
+    if request.method == 'POST':
+        sl = request.POST['slno']
+        cname = request.POST['curname']
+        stdr = request.POST['stdr']
+        lvr = request.POST['lvr']
+        sr = request.POST['sr']
+        lvr2 = request.POST['lvr2']
+        sr2 = request.POST['sr2']
         
-#         obj = CurrencyAlter(
-#             slno = sl,
-#             currencys= cname,
-#             stdrate = stdr,
-#             lastvrate = lvr,
-#             specirate = sr,
-#             lastvrate2 = lvr2,
-#             specirate2 = sr2,
+        obj = CurrencyAlter(
+            slno = sl,
+            currencys= cname,
+            stdrate = stdr,
+            lastvrate = lvr,
+            specirate = sr,
+            lastvrate2 = lvr2,
+            specirate2 = sr2,
             
             
            
-#         )
+        )
         
-#         obj.save()
-#         grp = CreateCurrency.objects.all()
-#         obj1 = CurrencyAlter.objects.all()
-#         context = {'grp':grp ,'obj':obj1}
-#         return redirect('load_rates_of_exchange',context)
-
-
-
-
-
-
-
-
-
-
-
-
-
+        obj.save()
+        grp = CreateCurrency.objects.all()
+        obj1 = CurrencyAlter.objects.all()
+        context = {'grp':grp ,'obj':obj1}
+        return redirect('load_rates_of_exchange',context)
